@@ -1,0 +1,24 @@
+<input type="text" [(ngModel)]="name">
+<div *ngIf="name.length>2">Its a large text</div>
+
+<hr>
+<p> Form is Valid: {{ this.myForm.valid }}</p>
+<p> Form is Pristine: {{ this.myForm.pristine }}</p>
+<p> Form is Touched: {{ this.myForm.touched }}</p>
+<input class="form-control" [formControl]="myForm">
+
+<hr>
+
+<p> Form is Valid: {{ this.myLoginForm.valid }}</p>
+<p> Form is Pristine: {{ this.myLoginForm.pristine }}</p>
+<p> Form is Touched: {{ this.myLoginForm.touched }}</p>
+<p> Login Value: {{ this.myLoginForm.value.login }}</p>
+<p> Password Value: {{ this.myLoginForm.value.password }}</p>
+<form [formGroup]="myLoginForm">
+    <input formControlName="login" placeholder="login">
+    <input formControlName="password" placeholder="password">
+</form>
+
+<hr>
+
+<app-template-form></app-template-form>

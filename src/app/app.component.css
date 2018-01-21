@@ -1,0 +1,9 @@
+form.ng-invalid {
+  border: 10px solid red;
+}
+form.ng-valid {
+  border: 1px solid blue;
+}
+form {
+  transition-duration: 1s;
+}
